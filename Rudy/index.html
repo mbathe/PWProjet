@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+
+  <meta charset="utf-8">
+
+  <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Global stylesheets -->
+    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap/bootstrap-grid.css" rel="stylesheet">
+    <link href=../assets/css/bootstrap/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap/bootstrap-reboot.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="../assets/css/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- Global javascript -->
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../assets/js/counter/jquery.waypoints.min.js"></script>
+    <script src="../assets/js/counter/jquery.counterup.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        $(".filter-b").click(function(){
+            var value = $(this).attr('data-filter');
+            if(value == "all")
+            { 
+                $('.filter').show('1000');
+            }
+            else
+            { 
+                $(".filter").not('.'+value).hide('3000');
+                $('.filter').filter('.'+value).show('3000');
+            }
+        });
+        
+        if ($(".filter-b").removeClass("active")) {
+          $(this).removeClass("active");
+        }
+        $(this).addClass("active");
+        });
+
+        // SKILLS
+        $(function () {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+        });
+    </script> 
+
+   
+  <title> Profil Utilisateur Meteo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
