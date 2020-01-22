@@ -1,0 +1,34 @@
+<div class="fond">
+      <div class="uscreen">     
+            <app-screen (click)="open()" ></app-screen>
+      </div>
+      <mat-tab-group >
+             <mat-tab label="Toutes les 3 heures"> <div class="affiche">
+               
+                  <app-item *ngFor="let d of data ;let i=index" [heure]=dateTime(d.dt) [temperature]="d.main.temp | number:'2.0-0'" [pluviometrie]="d.main.pressure" [humidity]="d.main.humidity" [location]="receiveResult.city.name" [description]="d.weather[0].description"  [iconId]="d.weather[0].icon" [index]="i">  </app-item>
+            </div></mat-tab>
+            <mat-tab [label]="jour1">
+                  <app-item *ngFor="let d of data ;let i=index" [heure]="d.dt_txt" [temperature]="d.main.temp | number:'2.0-0'" [pluviometrie]="d.main.pressure" [humidity]="d.main.humidity" [location]="receiveResult.city.name" [description]="d.weather[0].description"  [iconId]="d.weather[0].icon" [index]="i">  </app-item>
+            </mat-tab>
+
+            <mat-tab [label]="jour2"></mat-tab>
+            <mat-tab [label]="jour3"></mat-tab>
+            <mat-tab [label]="jour4"></mat-tab>
+            <mat-tab [label]="jour5"></mat-tab>
+      </mat-tab-group>
+</div>
+<div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" id="mod">
+          <span class="close" (click)="close()">X</span>
+          <app-carte></app-carte>
+        </div>
+      
+</div>
+     
+
+       
+         
+         
+      

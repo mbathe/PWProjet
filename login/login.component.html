@@ -1,0 +1,175 @@
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+
+  </nav>
+
+  <main>
+    <div *ngIf="login" class="login">
+      <!-- Default form login -->
+      <form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+
+        <p class="h4 mb-4">Sign in</p>
+
+        <!-- name -->
+        <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" formControlName="userName"
+          placeholder="user name">
+
+        <!-- Password -->
+        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" formControlName="password"
+          placeholder="Password">
+
+        <div *ngIf="loginFailed" class="alert alert-danger" role="alert">
+          echec de connexion
+        </div>
+
+        <div>
+          <!-- Forgot password -->
+          <a>Forgot password?</a>
+        </div>
+
+        <!-- Sign in button -->
+        <button class="btn btn-info  btn-block my-4" [disabled]="loginForm.invalid" type="submit">Sign in</button>
+
+        <!-- Register -->
+        <p>Not a member?
+          <button href="" (click)="isSingin()">Register</button>
+        </p>
+
+      </form>
+      <!-- Default form login -->
+    </div>
+    <div *ngIf="sigin" class="sigin">
+      <!-- Default form register -->
+      <form class="text-center border border-light p-5" [formGroup]="signUpForm" (ngSubmit)="onSignUpSubmit()">
+
+        <p class="h4 mb-4">Sign up</p>
+
+        <div class="form-row mb-4">
+          <div class="col">
+            <!-- First name -->
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" formControlName="firstName"
+              placeholder="First name">
+          </div>
+          <div class="col">
+            <!-- Last name -->
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" formControlName="lastName"
+              placeholder="Last name">
+          </div>
+        </div>
+
+        <!-- E-mail -->
+        <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" formControlName="userName"
+          placeholder="User name">
+
+        <!-- Password -->
+        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password"
+          aria-describedby="defaultRegisterFormPasswordHelpBlock" formControlName="password">
+        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          au moins 8 caracteres
+        </small>
+
+        <!-- Password Again -->
+        <input type="password" id="defaultRegisterFormPasswordAgain" class="form-control" placeholder="Password Again"
+          aria-describedby="defaultRegisterFormPasswordHelpBlock" formControlName="passwordAgain">
+
+
+        <!-- Newsletter -->
+
+        <!-- Sign up button -->
+        <button class="btn btn-info my-4 btn-block" [disabled]="signUpForm.invalid" type="submit">Sign in</button>
+
+        <!-- Terms of service -->
+        <p>By clicking
+          <em>Sign up</em> you agree to our
+          <a href="" target="_blank">terms of service</a>
+
+      </form>
+      <!-- Default form register -->
+    </div>
+  </main>
+
+
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">Footer Content</h5>
+          <p>Here you can use rows and columns here to organize your footer content.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/education/angular/"> 4GI </a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
